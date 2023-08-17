@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap 5 Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+   body{
+    background-image: url('static/log.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+   vertical{
+    display: block;
+    margin-left: auto;
+    margin-right: 100%;
+    
+   }
+  </style>
+</head>
+<nav class="navbar navbar-expand-lg bg-info">
+  <div class="container-fluid">
+
+    <a class="navbar-brand text-dark" href="#">
+      <h2>      ONLINE DRESS SHOPPING      <h2>
+    </a>
+    <ul class="navbar-nav">
+
+      <div class="btn-group position-absolute top-0 end-0">
+        <li class="nav-item btn  m-1">
+          <a class="nav-link text-dark btn btn-reset" href="/home"><h4><b>Home</b></h4></a>
+        </li>
+        <li class="nav-item btn  m-1">
+          <a class="nav-link text-dark btn btn-reset" href="/aboutus"><h4><b>AboutUs</b></h4></a>
+
+        </li>
+
+
+        <li class="nav-item btn  m-1">
+          <a class="nav-link text-dark btn btn-reset" href="/login"><h4><b>Login</b></h4></a>
+        </li>
+        
+      </div>
+
+    </ul>
+  </div>
+</nav>
+</html>
+
+<div class="text-center text-dark">
+
+  </div>
+
+<div class="row">
+  <div class="col-2"></div>
+  <div class="container mt-4 col card">
+    <div>
+      <h2>Register</h2>
+      <form action="/check_register">
+        <div class="mb-3 mt-3">
+          <lab>Firstname:</label>
+          <input type="text" class="form-control" id="firstname" required="required" placeholder="Enter Firstname"
+            name="firstname">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="lastname">Lastname:</label>
+          <input type="text" class="form-control" id="lastname" required="required" placeholder="Enter Lastname"
+            name="lastname">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="email">email:</label>
+          <input type="email" class="form-control" id="username" required="required" placeholder="Enter email"
+            name="username">
+        </div>
+        <div class="mb-3">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="password" required="required" placeholder="Enter password" name="password">
+        </div>
+        <div class="mb-3">
+          <label for="cnfpwd">Confirm Password:</label>
+          <input type="password" class="form-control" id="cnfpassword" required="required" placeholder="Confirm password"
+            name="cnfpassword">
+        </div>
+        <div class="form-check mb-3">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" name="remember"> Remember me
+          </label>
+        </div>
+        <div class="text-center d-grid btn-sm">
+          <button type="submit" class="btn btn-outline-primary btn-block">Submit</button>
+          <a href="/login">Already Registered</a>
+          {% if(msg): %}
+          <b>
+            <h4>{{ msg }}</h4>
+          </b>
+          {% endif %}
+        </div>
+      </form>
+    </div>
+    </div>
+  <div class="col-6"></div>
+</div>
+  </div>
+  </html>
